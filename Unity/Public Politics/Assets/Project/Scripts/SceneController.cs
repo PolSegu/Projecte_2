@@ -23,4 +23,8 @@ public class SceneController : MonoBehaviour
         actualSceneNumero = SceneManager.GetActiveScene().buildIndex;
     }
     
+    public void Exit()
+    {
+        Application.Quit();
+    }
 }
