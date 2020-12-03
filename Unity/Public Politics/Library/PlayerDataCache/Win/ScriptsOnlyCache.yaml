@@ -23,7 +23,6 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
     - UnityEditor.Graphs.AnimatorControllerTool
@@ -60,31 +59,31 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11290}
+      Script: {instanceID: 11286}
     - Class: 114
-      Script: {instanceID: 11580}
+      Script: {instanceID: 11576}
     - Class: 114
-      Script: {instanceID: 11634}
+      Script: {instanceID: 11630}
     - Class: 114
-      Script: {instanceID: 12298}
+      Script: {instanceID: 12294}
     - Class: 114
-      Script: {instanceID: 12568}
+      Script: {instanceID: 12564}
     - Class: 114
-      Script: {instanceID: 12926}
+      Script: {instanceID: 12922}
     - Class: 114
-      Script: {instanceID: 13004}
+      Script: {instanceID: 13000}
     - Class: 114
-      Script: {instanceID: 13160}
+      Script: {instanceID: 13156}
     - Class: 114
-      Script: {instanceID: 13350}
+      Script: {instanceID: 13346}
     - Class: 114
-      Script: {instanceID: 13664}
+      Script: {instanceID: 13660}
     - Class: 114
-      Script: {instanceID: 13766}
+      Script: {instanceID: 13762}
     - Class: 114
-      Script: {instanceID: 14376}
+      Script: {instanceID: 14372}
     - Class: 114
-      Script: {instanceID: 14418}
+      Script: {instanceID: 14414}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -121,31 +120,31 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11290}
+      Script: {instanceID: 11286}
     - Class: 114
-      Script: {instanceID: 11584}
+      Script: {instanceID: 11580}
     - Class: 114
-      Script: {instanceID: 11634}
+      Script: {instanceID: 11630}
     - Class: 114
-      Script: {instanceID: 12298}
+      Script: {instanceID: 12294}
     - Class: 114
-      Script: {instanceID: 12350}
+      Script: {instanceID: 12346}
     - Class: 114
-      Script: {instanceID: 12926}
+      Script: {instanceID: 12922}
     - Class: 114
-      Script: {instanceID: 13004}
+      Script: {instanceID: 13000}
     - Class: 114
-      Script: {instanceID: 13350}
+      Script: {instanceID: 13346}
     - Class: 114
-      Script: {instanceID: 13368}
+      Script: {instanceID: 13364}
     - Class: 114
-      Script: {instanceID: 13664}
+      Script: {instanceID: 13660}
     - Class: 114
-      Script: {instanceID: 13766}
+      Script: {instanceID: 13762}
     - Class: 114
-      Script: {instanceID: 14040}
+      Script: {instanceID: 14036}
     - Class: 114
-      Script: {instanceID: 14376}
+      Script: {instanceID: 14372}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -671,4 +670,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Project/Scenes/Menu.unity
   - Assets/Project/Scenes/Game.unity
-  playerPath: C:/Users/PolSegu/Desktop/BuildPublicPolitics/Public Politics.exe
+  playerPath: C:/Users/PolSegu/Desktop/BuildNotThisContainer/Not This Container.exe
