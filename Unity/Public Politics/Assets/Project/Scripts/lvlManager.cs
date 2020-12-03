@@ -13,6 +13,7 @@ public class lvlManager : MonoBehaviour
     public int box;
     public TextMeshProUGUI dineroAmount;
     public GameObject pantallaGameOver;
+    public GameObject pantallaAviso;
 
     GameObject FinalBueno;
     GameObject GameOver;
@@ -28,6 +29,8 @@ public class lvlManager : MonoBehaviour
         {
             pantallaGameOver.SetActive(false);
         }
+
+        
         
     }
 
@@ -48,6 +51,12 @@ public class lvlManager : MonoBehaviour
         else
         {
             dineroAmount.text = "Dinero: " + dinero.ToString();
+        }
+
+        if (vidas == 2 && box != 6)
+        {
+            pantallaAviso.SetActive(true);
+            vidas = 1;
         }
     }
 

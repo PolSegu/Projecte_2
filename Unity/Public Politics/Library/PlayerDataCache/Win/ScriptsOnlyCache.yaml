@@ -23,6 +23,7 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
     - UnityEditor.Graphs.AnimatorControllerTool
@@ -39,6 +40,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Image
     - UnityEngine.UI.Scrollbar
     - UnityEngine.UI.Slider
+    - UnityEngine.UI.Text
   sceneClasses:
     Assets/Project/Scenes/Game.unity:
     - Class: 1
@@ -58,29 +60,31 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11286}
+      Script: {instanceID: 11290}
     - Class: 114
-      Script: {instanceID: 11630}
+      Script: {instanceID: 11580}
     - Class: 114
-      Script: {instanceID: 12294}
+      Script: {instanceID: 11634}
     - Class: 114
-      Script: {instanceID: 12564}
+      Script: {instanceID: 12298}
     - Class: 114
-      Script: {instanceID: 12922}
+      Script: {instanceID: 12568}
     - Class: 114
-      Script: {instanceID: 13000}
+      Script: {instanceID: 12926}
     - Class: 114
-      Script: {instanceID: 13156}
+      Script: {instanceID: 13004}
     - Class: 114
-      Script: {instanceID: 13346}
+      Script: {instanceID: 13160}
     - Class: 114
-      Script: {instanceID: 13660}
+      Script: {instanceID: 13350}
     - Class: 114
-      Script: {instanceID: 13762}
+      Script: {instanceID: 13664}
     - Class: 114
-      Script: {instanceID: 14372}
+      Script: {instanceID: 13766}
     - Class: 114
-      Script: {instanceID: 14414}
+      Script: {instanceID: 14376}
+    - Class: 114
+      Script: {instanceID: 14418}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -117,31 +121,31 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11286}
+      Script: {instanceID: 11290}
     - Class: 114
-      Script: {instanceID: 11580}
+      Script: {instanceID: 11584}
     - Class: 114
-      Script: {instanceID: 11630}
+      Script: {instanceID: 11634}
     - Class: 114
-      Script: {instanceID: 12294}
+      Script: {instanceID: 12298}
     - Class: 114
-      Script: {instanceID: 12346}
+      Script: {instanceID: 12350}
     - Class: 114
-      Script: {instanceID: 12922}
+      Script: {instanceID: 12926}
     - Class: 114
-      Script: {instanceID: 13000}
+      Script: {instanceID: 13004}
     - Class: 114
-      Script: {instanceID: 13346}
+      Script: {instanceID: 13350}
     - Class: 114
-      Script: {instanceID: 13364}
+      Script: {instanceID: 13368}
     - Class: 114
-      Script: {instanceID: 13660}
+      Script: {instanceID: 13664}
     - Class: 114
-      Script: {instanceID: 13762}
+      Script: {instanceID: 13766}
     - Class: 114
-      Script: {instanceID: 14036}
+      Script: {instanceID: 14040}
     - Class: 114
-      Script: {instanceID: 14372}
+      Script: {instanceID: 14376}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -467,7 +471,7 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: d0444428c343b929f90a062515a17a24
+      Hash: 9010746251cd78bbf77bc50aa4572e67
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: lvlManager
