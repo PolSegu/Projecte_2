@@ -1,7 +1,9 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - PausaScrip
     - SceneController
+    - lvlManager
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Tilemap.Editor.dll:
@@ -36,8 +38,9 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
     - UnityEngine.UI.Scrollbar
+    - UnityEngine.UI.Slider
   sceneClasses:
-    Assets/Project/Scenes/GameDay1.unity:
+    Assets/Project/Scenes/Game.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -55,21 +58,29 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11278}
+      Script: {instanceID: 11286}
     - Class: 114
-      Script: {instanceID: 11622}
+      Script: {instanceID: 11630}
     - Class: 114
-      Script: {instanceID: 12286}
+      Script: {instanceID: 12294}
     - Class: 114
-      Script: {instanceID: 12990}
+      Script: {instanceID: 12564}
     - Class: 114
-      Script: {instanceID: 13334}
+      Script: {instanceID: 12922}
     - Class: 114
-      Script: {instanceID: 13648}
+      Script: {instanceID: 13000}
     - Class: 114
-      Script: {instanceID: 13750}
+      Script: {instanceID: 13156}
     - Class: 114
-      Script: {instanceID: 14360}
+      Script: {instanceID: 13346}
+    - Class: 114
+      Script: {instanceID: 13660}
+    - Class: 114
+      Script: {instanceID: 13762}
+    - Class: 114
+      Script: {instanceID: 14372}
+    - Class: 114
+      Script: {instanceID: 14414}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -106,31 +117,31 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11278}
+      Script: {instanceID: 11286}
     - Class: 114
-      Script: {instanceID: 11572}
+      Script: {instanceID: 11580}
     - Class: 114
-      Script: {instanceID: 11622}
+      Script: {instanceID: 11630}
     - Class: 114
-      Script: {instanceID: 12286}
+      Script: {instanceID: 12294}
     - Class: 114
-      Script: {instanceID: 12338}
+      Script: {instanceID: 12346}
     - Class: 114
-      Script: {instanceID: 12912}
+      Script: {instanceID: 12922}
     - Class: 114
-      Script: {instanceID: 12990}
+      Script: {instanceID: 13000}
     - Class: 114
-      Script: {instanceID: 13334}
+      Script: {instanceID: 13346}
     - Class: 114
-      Script: {instanceID: 13352}
+      Script: {instanceID: 13364}
     - Class: 114
-      Script: {instanceID: 13648}
+      Script: {instanceID: 13660}
     - Class: 114
-      Script: {instanceID: 13750}
+      Script: {instanceID: 13762}
     - Class: 114
-      Script: {instanceID: 14024}
+      Script: {instanceID: 14036}
     - Class: 114
-      Script: {instanceID: 14360}
+      Script: {instanceID: 14372}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -390,6 +401,12 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
+      Hash: 67a57579eebd224d93ec0b0efa4bc95e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PausaScrip
+  - hash:
+      serializedVersion: 2
       Hash: d4020bafcd3ccbb5601a6e6c8ac78be0
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -448,6 +465,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: VerticalLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: lvlManager
   - hash:
       serializedVersion: 2
       Hash: 71b711096c6c32621c1d4c02310898b7
@@ -643,5 +666,5 @@ ScriptsOnlyBuild:
   platform: 5
   scenePathNames:
   - Assets/Project/Scenes/Menu.unity
-  - Assets/Project/Scenes/GameDay1.unity
-  playerPath: C:/Users/PolSegu/Desktop/Build/Public Politics.exe
+  - Assets/Project/Scenes/Game.unity
+  playerPath: C:/Users/PolSegu/Desktop/BuildPublicPolitics/Public Politics.exe
