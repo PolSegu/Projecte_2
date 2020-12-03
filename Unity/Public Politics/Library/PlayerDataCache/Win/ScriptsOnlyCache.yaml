@@ -467,7 +467,7 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: d0444428c343b929f90a062515a17a24
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: lvlManager
