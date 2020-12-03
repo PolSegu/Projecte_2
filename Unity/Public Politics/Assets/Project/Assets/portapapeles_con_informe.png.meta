@@ -5,6 +5,9 @@ TextureImporter:
   - first:
       213: 8389803401576174359
     second: portapapeles_con_informe_0
+  - first:
+      213: 6939563396451956138
+    second: portapapeles_con_informe_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -95,7 +98,7 @@ TextureImporter:
         serializedVersion: 2
         x: 73
         y: 22
-        width: 262
+        width: 259
         height: 373
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -104,8 +107,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 713df4e1eb19e6470800000000000000
-      internalID: 8389803401576174359
+      spriteID: aa572d544284e4060800000000000000
+      internalID: 6939563396451956138
       vertices: []
       indices: 
       edges: []
