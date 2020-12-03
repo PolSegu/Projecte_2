@@ -40,7 +40,7 @@ PlayerSettings:
     width: 1
     height: 1
   m_SplashScreenLogos:
-  - logo: {fileID: 21300000, guid: 58bbff7bc8c28a64c815e2fcbe8ceea6, type: 3}
+  - logo: {fileID: 21300000, guid: 6ede1aa7ae9b44242abb014e511fea30, type: 3}
     duration: 2
   - logo: {fileID: 21300000, guid: df5827a5080e23b439c54ca7da4662d2, type: 3}
     duration: 2
@@ -506,7 +506,7 @@ PlayerSettings:
   ps4IncludedModules: []
   ps4attribVROutputEnabled: 0
   monoEnv: 
-  splashScreenBackgroundSourceLandscape: {fileID: 21300000, guid: b34c5e7ba86f24a40815c707b1efcc18,
+  splashScreenBackgroundSourceLandscape: {fileID: 21300000, guid: 1cb9c6204093f0a458f8ef2b78b3d34e,
     type: 3}
   splashScreenBackgroundSourcePortrait: {fileID: 0}
   blurSplashScreenBackground: 1
