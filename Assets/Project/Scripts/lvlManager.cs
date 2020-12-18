@@ -54,13 +54,6 @@ public class lvlManager : MonoBehaviour
 
 }
 
-    /*IEnumerator Esperar()
-    {
-
-        yield return new WaitForSeconds(0.3f);
-
-    }*/
-
     void Update()
     {
         // Final vida >= 0
@@ -73,12 +66,14 @@ public class lvlManager : MonoBehaviour
         {
             dineroAmount.text = "Dinero: " + dinero.ToString();
         }
+
         // Aviso low vida
         if (vidas == 2 && box != 6)
         {
             pantallaAviso.SetActive(true);
             vidas = 1;
         }
+
         // Finales repu FULL
         if (reputacionMafia1 <= 100)
         {
@@ -92,22 +87,24 @@ public class lvlManager : MonoBehaviour
         {
             finalMafia3Full.SetActive(true);
         }
+
         // Finales repu LOW
         if (reputacionMafia1 >= 0)
         {
+            finalMafia1Low.SetActive(true);
+        }
+        if (reputacionMafia2 >= 0)
+        {
+            finalMafia2Low.SetActive(true);
+        }
+        if (reputacionMafia3 >= 0)
+        {
             finalMafia3Low.SetActive(true);
         }
-        if (reputacionMafia1 >= 0)
-        {
-            finalMafia1Low.SetActive(true);
-        }
-        if (reputacionMafia1 >= 0)
-        {
-            finalMafia1Low.SetActive(true);
-        }
+
     }
 
-    public void Reputacion(Button button)   //reputacionRusia reputacionColombia reputacionAlemania
+    public void Reputacion(Button button)   //reputacionRusia 1   reputacionColombia 2   reputacionAlemania 3
     {
         // mafia 1
         if (box == 6 || box == 11 || box == 16 || box == 23 )
@@ -117,14 +114,18 @@ public class lvlManager : MonoBehaviour
                 reputacionMafia1 += 30;
                 reputacionMafia2 -= 10;
                 reputacionMafia3 -= 10;
-                Debug.Log("reputacionRusia");
+
+                contadorContenedorRusia++;
+                contadorContenedorDroga++;
+                Debug.Log("reputacionRusia-");
             }
             if (button.name == "DenegarButton")
             {
-                reputacionMafia1 -= 75;
-                Debug.Log("-75 dinero");
+                reputacionMafia1 -= 10;
+                reputacionMafia2 += 5;
+                reputacionMafia3 += 5;
+                Debug.Log("reputacionRusia+");
             }
-
         }
 
         // mafia 2
@@ -132,35 +133,50 @@ public class lvlManager : MonoBehaviour
         {
             if (button.name == "AceptarButton")
             {
-                reputacionMafia2 += 50;
-                Debug.Log("+50 dinero");
+                reputacionMafia1 -= 10;
+                reputacionMafia2 += 30;
+                reputacionMafia3 -= 10;
+
+                contadorContenedorColombia++;
+                contadorContenedorDroga++;
+                Debug.Log("reputacionColombia-");
             }
             if (button.name == "DenegarButton")
             {
-                reputacionMafia2 -= 75;
-                Debug.Log("-75 dinero");
-            }
+                reputacionMafia1 += 5;
+                reputacionMafia2 -= 10;
+                reputacionMafia3 += 5;
 
+                contadorContenedorAlemania++;
+                contadorContenedorDroga++;
+                Debug.Log("reputacionColombia+");
+            }
         }
 
         // mafia 3
         if (box == 10 || box == 13 || box == 21 || box == 24 )
         {
-            if (button.name == "DenegarButton")
-            {
-                reputacionMafia2 += 50;
-            }
             if (button.name == "AceptarButton")
             {
-                reputacionMafia2 -= 75;
+                reputacionMafia1 -= 10;
+                reputacionMafia2 -= 10;
+                reputacionMafia3 += 30;
+                Debug.Log("reputacionAlemania-");
             }
-
+            if (button.name == "DenegarButton")
+            {
+                reputacionMafia1 += 5;
+                reputacionMafia2 += 5;
+                reputacionMafia3 -= 10;
+                Debug.Log("reputacionAlemania+");
+            }
         }
+
     }
 
-    public void NextBox(Button button)
+    public void Trabajo(Button button)
     {
-        if(box == 1 || box == 2 || box == 3 || box == 6 || box == 8 || box == 10)
+        if(box == 1 || box == 2 || box == 3 || box == 7 || box == 9 || box == 12 || box == 15 || box == 20 || box == 25)
         {
             if(button.name == "AceptarButton")
             {
@@ -172,21 +188,23 @@ public class lvlManager : MonoBehaviour
                 dinero -= 75;
                 Debug.Log("-75 dinero");
             }
-            
         }
 
-        if (box == 4 || box == 5 || box == 7 || box == 9 || box == 10)
+        if (box == 4 || box == 5 || box == 6 || box == 8 || box == 10 || box == 11 || box == 13 || box == 14 || box == 16
+            || box == 17 || box == 18 || box == 19 || box == 21 || box == 22 || box == 23 || box == 24)
         {
             if (button.name == "DenegarButton")
             {
                 dinero += 50;
+                Debug.Log("-75 dinero");
             }
             if (button.name == "AceptarButton")
             {
                 dinero -= 75;
+                Debug.Log("+50 dinero");
             }
-            
         }
+
         box++;
 
     }
