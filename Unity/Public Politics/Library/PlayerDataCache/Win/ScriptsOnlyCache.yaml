@@ -670,4 +670,5 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Project/Scenes/Menu.unity
   - Assets/Project/Scenes/Game.unity
-  playerPath: C:/Users/PolSegu/Desktop/BuildNotThisContainer/Not This Container.exe
+  playerPath: C:/Users/PolSegu/Desktop/SecretSwan/BuildNotThisContainer/Not This
+    Container.exe

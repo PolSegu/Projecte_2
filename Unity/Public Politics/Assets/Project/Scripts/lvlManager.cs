@@ -7,6 +7,14 @@ using TMPro;
 
 public class lvlManager : MonoBehaviour
 {
+    private int contadorContenedorDroga = 0;
+    private int contadorContenedorLegales = 0;
+    private int contadorContenedorRusia = 0;
+    private int contadorContenedorColombia = 0;
+    private int contadorContenedorAlemania = 0;
+    private int contadorContenedorOtros = 0;
+
+
     public int time;
     public int dinero;
     public int vidas;
@@ -14,6 +22,16 @@ public class lvlManager : MonoBehaviour
     public TextMeshProUGUI dineroAmount;
     public GameObject pantallaGameOver;
     public GameObject pantallaAviso;
+
+    public bool tratoRusia;
+    public bool tratoColombia;
+    public bool tratoAlemania;
+    public int trabajo;
+    public int reputacionRusia;
+    public int reputacionColombia;
+    public int reputacionAlemania;
+
+
 
     GameObject FinalBueno;
     GameObject GameOver;
@@ -30,9 +48,7 @@ public class lvlManager : MonoBehaviour
             pantallaGameOver.SetActive(false);
         }
 
-        
-        
-    }
+}
 
     /*IEnumerator Esperar()
     {
@@ -62,30 +78,30 @@ public class lvlManager : MonoBehaviour
 
     public void NextBox(Button button)
     {
-        if(box == 1 || box == 2 || box == 3 || box == 7 || box == 9)
+        if(box == 1 || box == 2 || box == 3 || box == 6 || box == 8 || box == 10)
         {
             if(button.name == "AceptarButton")
             {
-                dinero += 100;
-                Debug.Log("dinero");
+                dinero += 50;
+                Debug.Log("+50 dinero");
             }
             if (button.name == "DenegarButton")
             {
-                vidas--;
-                Debug.Log("-Vida");
+                dinero -= 75;
+                Debug.Log("-75 dinero");
             }
             
         }
 
-        if (box == 4 || box == 5 || box == 6 || box == 8 || box == 10)
+        if (box == 4 || box == 5 || box == 7 || box == 9 || box == 10)
         {
             if (button.name == "DenegarButton")
             {
-                dinero += 100;
+                dinero += 50;
             }
             if (button.name == "AceptarButton")
             {
-                vidas--;
+                dinero -= 75;
             }
             
         }
