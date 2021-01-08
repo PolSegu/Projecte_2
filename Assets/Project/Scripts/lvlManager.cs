@@ -193,14 +193,14 @@ public class lvlManager : MonoBehaviour
         if (box == 4 || box == 5 || box == 6 || box == 8 || box == 10 || box == 11 || box == 13 || box == 14 || box == 16
             || box == 17 || box == 18 || box == 19 || box == 21 || box == 22 || box == 23 || box == 24)
         {
-            if (button.name == "DenegarButton")
-            {
-                dinero += 50;
-                Debug.Log("-75 dinero");
-            }
             if (button.name == "AceptarButton")
             {
                 dinero -= 75;
+                Debug.Log("-75 dinero");
+            }
+            if (button.name == "DenegarButton")
+            {
+                dinero += 50;
                 Debug.Log("+50 dinero");
             }
         }
