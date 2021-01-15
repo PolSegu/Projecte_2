@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 60d407a78a6f58b47be292accd0d930a
+guid: 3912fef974afe144dac9ee1ad2e7a7ea
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1192555663814694499
-    second: container_vermell_vertical_0
+      213: 5540436284289822649
+    second: container groc vertical_0
+  - first:
+      213: 3803093523830164326
+    second: container groc vertical_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -86,17 +89,41 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: container_vermell_vertical_0
+      name: container groc vertical_0
       rect:
         serializedVersion: 2
-        x: 332
+        x: 331
         y: 115
-        width: 361
-        height: 793
+        width: 362
+        height: 794
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -104,8 +131,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d99e17331f0337fe0800000000000000
-      internalID: -1192555663814694499
+      spriteID: 66b4c77096d47c430800000000000000
+      internalID: 3803093523830164326
       vertices: []
       indices: 
       edges: []
