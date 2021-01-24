@@ -7663,20 +7663,12 @@ MonoBehaviour:
   fuente3: {fileID: 0}
   fuente4: {fileID: 0}
   fuente5: {fileID: 0}
+  fuente6: {fileID: 0}
   clipPapel: {fileID: 8300000, guid: 6549065c9b320a0418b8c880798b1809, type: 3}
   clipCarpeta: {fileID: 0}
   clipLupa: {fileID: 0}
   clipContainerLargo: {fileID: 0}
-  fuente11: {fileID: 200964320}
-  fuente12: {fileID: 583209340}
-  fuente13: {fileID: 0}
-  fuente14: {fileID: 0}
-  fuente15: {fileID: 0}
-  MenuSound1: {fileID: 8300000, guid: 6549065c9b320a0418b8c880798b1809, type: 3}
-  MenuSound2: {fileID: 0}
-  MenuSound3: {fileID: 0}
-  MenuSound4: {fileID: 0}
-  MenuSound5: {fileID: 0}
+  clipLapiz: {fileID: 0}
   fuente20: {fileID: 0}
   musicBackground1: {fileID: 0}
 --- !u!4 &1858556210
