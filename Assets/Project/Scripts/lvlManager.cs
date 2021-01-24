@@ -39,8 +39,8 @@ public class lvlManager : MonoBehaviour
     public GameObject finalMafia2Low;
     public GameObject finalMafia3Full;
     public GameObject finalMafia3Low;
-    
-    
+
+
     void Start()
     {
         if(vidas <= 0)
@@ -209,8 +209,5 @@ public class lvlManager : MonoBehaviour
 
     }
 
-
-
-    
 
 }
