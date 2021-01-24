@@ -62,7 +62,7 @@ public class lvlManager : MonoBehaviour
         // Aviso 
         if (vidas == 2 )
         {
-            pantallaAviso.SetActive(true);
+            //pantallaAviso.SetActive(true);            // De momento lo dejo fuera
             vidas = 1;
         }
         // Final gameover
@@ -73,29 +73,29 @@ public class lvlManager : MonoBehaviour
         }
 
         // Finales repu FULL
-        if (reputacionMafia1 <= 100)
+        if (reputacionMafia1 >= 100)
         {
             finalMafia1Full.SetActive(true);
         }
-        if (reputacionMafia2 <= 100)
+        if (reputacionMafia2 >= 100)
         {
             finalMafia2Full.SetActive(true);
         }
-        if (reputacionMafia3 <= 100)
+        if (reputacionMafia3 >= 100)
         {
             finalMafia3Full.SetActive(true);
         }
 
         // Finales repu LOW
-        if (reputacionMafia1 >= 0)
+        if (reputacionMafia1 <= 0)
         {
             finalMafia1Low.SetActive(true);
         }
-        if (reputacionMafia2 >= 0)
+        if (reputacionMafia2 <= 0)
         {
             finalMafia2Low.SetActive(true);
         }
-        if (reputacionMafia3 >= 0)
+        if (reputacionMafia3 <= 0)
         {
             finalMafia3Low.SetActive(true);
         }
