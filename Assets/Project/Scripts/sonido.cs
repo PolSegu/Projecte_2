@@ -17,6 +17,20 @@ public class sonido : MonoBehaviour
     public AudioClip clipLupa;
     public AudioClip clipContainerLargo;
 
+    // Menu sound
+
+    public AudioSource fuente11;
+    public AudioSource fuente12;
+    public AudioSource fuente13;
+    public AudioSource fuente14;
+    public AudioSource fuente15;
+
+    public AudioClip MenuSound1;
+    public AudioClip MenuSound2;
+    public AudioClip MenuSound3;
+    public AudioClip MenuSound4;
+    public AudioClip MenuSound5;
+
     // Soundtrack
 
     public AudioSource fuente20;
@@ -30,6 +44,12 @@ public class sonido : MonoBehaviour
         fuente3.clip = clipLupa;
         fuente4.clip = clipContainerLargo;
         fuente5.clip = clipContainerLargo;
+
+        fuente11.clip = MenuSound1;
+        fuente12.clip = MenuSound2;
+        fuente13.clip = MenuSound3;
+        fuente14.clip = MenuSound4;
+        fuente15.clip = MenuSound5;
 
         fuente20.clip = musicBackground1;
     }
@@ -74,5 +94,30 @@ public class sonido : MonoBehaviour
 
         fuente20.Stop();
 
+    }
+
+    public void ReproducirMenu1()
+    {
+        fuente11.Play();
+    }
+
+    public void ReproducirMenu2()
+    {
+        fuente12.Play();
+    }
+
+    public void ReproducirMenu3()
+    {
+        fuente13.Play();
+    }
+
+    public void ReproducirMenu4()
+    {
+        fuente14.Play();
+    }
+
+    public void ReproducirMenu5()
+    {
+        fuente15.Play();
     }
 }
