@@ -15,7 +15,7 @@ public class lvlManager : MonoBehaviour
     private int contadorContenedorAlemania = 0;
     private int contadorContenedorOtros = 0;
 
-
+    public int adminBox = 27;
     public int time;
     public int dinero;
     public int fallo = 0;
@@ -329,7 +329,7 @@ public class lvlManager : MonoBehaviour
 
     public void AdministratorTool(Button button)
     {
-        box = 27;
+        box = adminBox;
     }
 
 
