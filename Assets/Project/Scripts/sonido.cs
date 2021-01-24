@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class sonido : MonoBehaviour
 {
+    public static sonido instance;
+
     // Sound events
 
     public AudioSource fuente1;
@@ -12,12 +14,22 @@ public class sonido : MonoBehaviour
     public AudioSource fuente4;
     public AudioSource fuente5;
     public AudioSource fuente6;
+    public AudioSource fuente7;
+    public AudioSource fuente8;
+    public AudioSource fuente9;
+    public AudioSource fuente10;
+    public AudioSource fuente11;
 
     public AudioClip clipPapel;
     public AudioClip clipCarpeta;
     public AudioClip clipLupa;
     public AudioClip clipContainerLargo;
     public AudioClip clipLapiz;
+    public AudioClip clipYes;
+    public AudioClip clipNoo;
+    public AudioClip finaldiaperf;
+    public AudioClip finaldia1F;
+    public AudioClip finaldia2F;
 
     // Menu sound
 
@@ -41,12 +53,20 @@ public class sonido : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        instance = this;
+
         fuente1.clip = clipPapel;
         fuente2.clip = clipCarpeta;
         fuente3.clip = clipLupa;
         fuente4.clip = clipContainerLargo;
         fuente5.clip = clipContainerLargo;
         fuente6.clip = clipLapiz;
+        fuente7.clip = clipYes;
+        fuente8.clip = clipNoo;
+
+        fuente9.clip = finaldiaperf;
+        fuente10.clip = finaldia1F;
+        fuente11.clip = finaldia2F;
 
         //fuente11.clip = MenuSound1;
         //fuente12.clip = MenuSound2;
@@ -56,6 +76,7 @@ public class sonido : MonoBehaviour
 
         fuente20.clip = musicBackground1;
         PlayMusicaFondo();
+
     }
 
     // Update is called once per frame
@@ -89,6 +110,16 @@ public class sonido : MonoBehaviour
         fuente6.Play();
     }
 
+    public void ReproducirYes()
+    {
+        fuente7.Play();
+    }
+
+    public void ReproducirNoo()
+    {
+        fuente8.Play();
+    }
+
     public void PlayMusicaFondo()
     {
         // Music Background
@@ -103,6 +134,36 @@ public class sonido : MonoBehaviour
 
         fuente20.Stop();
 
+    }
+
+    public void PlayMusicfinaldiaperf()
+    {
+        fuente9.Play();
+    }
+
+    public void StopMusicfinaldia()
+    {
+        fuente9.Stop();
+    }
+
+    public void PlayMusicfinaldia1F()
+    {
+        fuente10.Play();
+    }
+
+    public void StopMusicfinaldia1F()
+    {
+        fuente10.Stop();
+    }
+
+    public void PlayMusicfinaldia2F()
+    {
+        fuente11.Play();
+    }
+
+    public void StopMusicfinaldia2F()
+    {
+        fuente11.Stop();
     }
 
     //public void ReproducirMenu1()
