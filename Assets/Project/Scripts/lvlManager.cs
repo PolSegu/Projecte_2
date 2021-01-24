@@ -7,6 +7,7 @@ using TMPro;
 
 public class lvlManager : MonoBehaviour
 {
+
     private int contadorContenedorDroga = 0;
     private int contadorContenedorLegales = 0;
     private int contadorContenedorRusia = 0;
@@ -63,7 +64,6 @@ public class lvlManager : MonoBehaviour
         {
             pantallaGameOver.SetActive(false);
         }
-
 }
 
     void Update()

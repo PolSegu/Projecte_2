@@ -14,6 +14,9 @@ public class sonido : MonoBehaviour
     public AudioSource fuente6;
     public AudioSource fuente7;
     public AudioSource fuente8;
+    public AudioSource fuente9;
+    public AudioSource fuente10;
+    public AudioSource fuente11;
 
     public AudioClip clipPapel;
     public AudioClip clipCarpeta;
@@ -22,6 +25,9 @@ public class sonido : MonoBehaviour
     public AudioClip clipLapiz;
     public AudioClip clipYes;
     public AudioClip clipNoo;
+    public AudioClip finaldiaperf;
+    public AudioClip finaldia1F;
+    public AudioClip finaldia2F;
 
     // Menu sound
 
@@ -53,6 +59,10 @@ public class sonido : MonoBehaviour
         fuente6.clip = clipLapiz;
         fuente7.clip = clipYes;
         fuente8.clip = clipNoo;
+
+        fuente9.clip = finaldiaperf;
+        fuente10.clip = finaldia1F;
+        fuente11.clip = finaldia2F;
 
         //fuente11.clip = MenuSound1;
         //fuente12.clip = MenuSound2;
@@ -120,6 +130,36 @@ public class sonido : MonoBehaviour
 
         fuente20.Stop();
 
+    }
+
+    public void PlayMusicfinaldiaperf()
+    {
+        fuente9.Play();
+    }
+
+    public void StopMusicfinaldia()
+    {
+        fuente9.Stop();
+    }
+
+    public void PlayMusicfinaldia1F()
+    {
+        fuente10.Play();
+    }
+
+    public void StopMusicfinaldia1F()
+    {
+        fuente10.Stop();
+    }
+
+    public void PlayMusicfinaldia2F()
+    {
+        fuente11.Play();
+    }
+
+    public void StopMusicfinaldia2F()
+    {
+        fuente11.Stop();
     }
 
     //public void ReproducirMenu1()
