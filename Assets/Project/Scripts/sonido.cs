@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class sonido : MonoBehaviour
 {
+    public static sonido instance;
+
     // Sound events
 
     public AudioSource fuente1;
@@ -51,6 +53,8 @@ public class sonido : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        instance = this;
+
         fuente1.clip = clipPapel;
         fuente2.clip = clipCarpeta;
         fuente3.clip = clipLupa;
