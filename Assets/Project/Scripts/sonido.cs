@@ -11,25 +11,27 @@ public class sonido : MonoBehaviour
     public AudioSource fuente3;
     public AudioSource fuente4;
     public AudioSource fuente5;
+    public AudioSource fuente6;
 
     public AudioClip clipPapel;
     public AudioClip clipCarpeta;
     public AudioClip clipLupa;
     public AudioClip clipContainerLargo;
+    public AudioClip clipLapiz;
 
     // Menu sound
 
-    public AudioSource fuente11;
-    public AudioSource fuente12;
-    public AudioSource fuente13;
-    public AudioSource fuente14;
-    public AudioSource fuente15;
-
-    public AudioClip MenuSound1;
-    public AudioClip MenuSound2;
-    public AudioClip MenuSound3;
-    public AudioClip MenuSound4;
-    public AudioClip MenuSound5;
+    //public AudioSource fuente11;
+    //public AudioSource fuente12;
+    //public AudioSource fuente13;
+    //public AudioSource fuente14;
+    //public AudioSource fuente15;
+    //
+    //public AudioClip MenuSound1;
+    //public AudioClip MenuSound2;
+    //public AudioClip MenuSound3;
+    //public AudioClip MenuSound4;
+    //public AudioClip MenuSound5;
 
     // Soundtrack
 
@@ -44,14 +46,16 @@ public class sonido : MonoBehaviour
         fuente3.clip = clipLupa;
         fuente4.clip = clipContainerLargo;
         fuente5.clip = clipContainerLargo;
+        fuente6.clip = clipLapiz;
 
-        fuente11.clip = MenuSound1;
-        fuente12.clip = MenuSound2;
-        fuente13.clip = MenuSound3;
-        fuente14.clip = MenuSound4;
-        fuente15.clip = MenuSound5;
+        //fuente11.clip = MenuSound1;
+        //fuente12.clip = MenuSound2;
+        //fuente13.clip = MenuSound3;
+        //fuente14.clip = MenuSound4;
+        //fuente15.clip = MenuSound5;
 
         fuente20.clip = musicBackground1;
+        PlayMusicaFondo();
     }
 
     // Update is called once per frame
@@ -80,6 +84,11 @@ public class sonido : MonoBehaviour
         fuente5.Play();
     }
 
+    public void ReproducirLapiz()
+    {
+        fuente6.Play();
+    }
+
     public void PlayMusicaFondo()
     {
         // Music Background
@@ -96,28 +105,28 @@ public class sonido : MonoBehaviour
 
     }
 
-    public void ReproducirMenu1()
-    {
-        fuente11.Play();
-    }
-
-    public void ReproducirMenu2()
-    {
-        fuente12.Play();
-    }
-
-    public void ReproducirMenu3()
-    {
-        fuente13.Play();
-    }
-
-    public void ReproducirMenu4()
-    {
-        fuente14.Play();
-    }
-
-    public void ReproducirMenu5()
-    {
-        fuente15.Play();
-    }
+    //public void ReproducirMenu1()
+    //{
+    //    fuente11.Play();
+    //}
+    //
+    //public void ReproducirMenu2()
+    //{
+    //    fuente12.Play();
+    //}
+    //
+    //public void ReproducirMenu3()
+    //{
+    //    fuente13.Play();
+    //}
+    //
+    //public void ReproducirMenu4()
+    //{
+    //    fuente14.Play();
+    //}
+    //
+    //public void ReproducirMenu5()
+    //{
+    //    fuente15.Play();
+    //}
 }
