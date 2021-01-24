@@ -34,6 +34,10 @@ public class lvlManager : MonoBehaviour
     public GameObject finalDia1F;
     public GameObject finalDia2F;
 
+    public GameObject respuestaIncorrecta;
+    public GameObject respuestaCorrecta;
+
+
     public GameObject pantallaGameOver;
     public GameObject pantallaAviso;
     public GameObject finalMafia1Full;
@@ -42,6 +46,11 @@ public class lvlManager : MonoBehaviour
     public GameObject finalMafia2Low;
     public GameObject finalMafia3Full;
     public GameObject finalMafia3Low;
+
+    public GameObject presentacionMafi1;
+    public GameObject presentacionMafi2;
+    public GameObject presentacionMafi3;
+
 
 
     void Start()
@@ -181,12 +190,14 @@ public class lvlManager : MonoBehaviour
             {
                 dinero += 25;
                 Debug.Log("+25 dinero");
+                respuestaCorrecta.SetActive(true);
             }
             if (button.name == "DenegarButton")
             {
                 dinero -= 50;
                 Debug.Log("-50 dinero");
                 fallo++;
+                respuestaIncorrecta.SetActive(true);
             }
         }
         // Jefe mal contenedor
@@ -198,11 +209,13 @@ public class lvlManager : MonoBehaviour
                 dinero -= 50;
                 Debug.Log("-50 dinero");
                 fallo++;
+                respuestaIncorrecta.SetActive(true);
             }
             if (button.name == "DenegarButton")
             {
                 dinero += 25;
                 Debug.Log("+25 dinero");
+                respuestaCorrecta.SetActive(true);
             }
         }
 
@@ -215,6 +228,7 @@ public class lvlManager : MonoBehaviour
             if (fallo == 0)
             {
                 finalDiaperf.SetActive(true);
+                
             }
 
             if (fallo == 1)
@@ -225,6 +239,21 @@ public class lvlManager : MonoBehaviour
             if (fallo < 1)
             {
                 finalDia2F.SetActive(true);
+            }
+
+            if(box == 6)
+            {
+                presentacionMafi1.SetActive(true);
+            }
+
+            if (box == 10)
+            {
+                presentacionMafi2.SetActive(true);
+            }
+
+            if (box == 19)
+            {
+                presentacionMafi3.SetActive(true);
             }
 
             fallo = 0;
