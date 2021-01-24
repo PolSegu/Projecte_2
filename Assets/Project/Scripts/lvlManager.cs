@@ -17,19 +17,22 @@ public class lvlManager : MonoBehaviour
 
     public int time;
     public int dinero;
-    public int vidas;   //se tiene que cambiar
+    public int fallo = 0;
+    public int vidas = 3;   // no se debe usar => done
     public int box;
     public TextMeshProUGUI dineroAmount;
 
     public bool tratoRusia;
     public bool tratoColombia;
     public bool tratoAlemania;
-    public int trabajo;     // pasara a ser el valor correcto
+    // public int trabajo;     // pasara a ser el valor correcto => done
     public int reputacionMafia1 = 50;
     public int reputacionMafia2 = 50;
     public int reputacionMafia3 = 50;
 
-
+    public GameObject finalDiaperf;
+    public GameObject finalDia1F;
+    public GameObject finalDia2F;
 
     public GameObject pantallaGameOver;
     public GameObject pantallaAviso;
@@ -56,22 +59,17 @@ public class lvlManager : MonoBehaviour
 
     void Update()
     {
-        // Final vida >= 0
-        if(vidas <= 0)
-        {
-            pantallaGameOver.SetActive(true);
-            Debug.Log("gameover");
-        }
-        else
-        {
-            dineroAmount.text = "Dinero: " + dinero.ToString();
-        }
-
-        // Aviso low vida
-        if (vidas == 2 && box != 6)
+        // Aviso 
+        if (vidas == 2 )
         {
             pantallaAviso.SetActive(true);
             vidas = 1;
+        }
+        // Final gameover
+        if (vidas == 0)
+        {
+            pantallaGameOver.SetActive(true);
+            Debug.Log("gameover");
         }
 
         // Finales repu FULL
@@ -104,16 +102,17 @@ public class lvlManager : MonoBehaviour
 
     }
 
-    public void Reputacion(Button button)   //reputacionRusia 1   reputacionColombia 2   reputacionAlemania 3
+    public void Trabajo(Button button)
     {
         // mafia 1
-        if (box == 6 || box == 11 || box == 16 || box == 23 )
+        if (box == 6 || box == 12 || box == 15 || box == 20 || box == 27)
         {
             if (button.name == "AceptarButton")
             {
                 reputacionMafia1 += 30;
                 reputacionMafia2 -= 10;
                 reputacionMafia3 -= 10;
+                dinero += 100;
 
                 contadorContenedorRusia++;
                 contadorContenedorDroga++;
@@ -129,13 +128,14 @@ public class lvlManager : MonoBehaviour
         }
 
         // mafia 2
-        if (box == 8 || box == 14 || box == 18 || box == 19 )
+        if (box == 10 || box == 18 || box == 22)
         {
             if (button.name == "AceptarButton")
             {
                 reputacionMafia1 -= 10;
                 reputacionMafia2 += 30;
                 reputacionMafia3 -= 10;
+                dinero += 100;
 
                 contadorContenedorColombia++;
                 contadorContenedorDroga++;
@@ -147,20 +147,22 @@ public class lvlManager : MonoBehaviour
                 reputacionMafia2 -= 10;
                 reputacionMafia3 += 5;
 
-                contadorContenedorAlemania++;
-                contadorContenedorDroga++;
                 Debug.Log("reputacionColombia+");
             }
         }
 
         // mafia 3
-        if (box == 10 || box == 13 || box == 21 || box == 24 )
+        if (box == 25 || box == 28)
         {
             if (button.name == "AceptarButton")
             {
                 reputacionMafia1 -= 10;
                 reputacionMafia2 -= 10;
                 reputacionMafia3 += 30;
+                dinero += 100;
+
+                contadorContenedorAlemania++;
+                contadorContenedorDroga++;
                 Debug.Log("reputacionAlemania-");
             }
             if (button.name == "DenegarButton")
@@ -172,41 +174,73 @@ public class lvlManager : MonoBehaviour
             }
         }
 
-    }
-
-    public void Trabajo(Button button)
-    {
-        if(box == 1 || box == 2 || box == 3 || box == 7 || box == 9 || box == 12 || box == 15 || box == 20 || box == 25)
+        // Jefe buen contenedor
+        if (box == 1 || box == 2 || box == 3 || box == 7 || box == 8 || box == 13 || box == 14 || box == 16 || box == 17 || box == 19 || box == 21 || box == 24 || box == 26 || box == 29)
         {
             if(button.name == "AceptarButton")
             {
-                dinero += 50;
-                Debug.Log("+50 dinero");
+                dinero += 25;
+                Debug.Log("+25 dinero");
             }
             if (button.name == "DenegarButton")
             {
-                dinero -= 75;
-                Debug.Log("-75 dinero");
+                dinero -= 50;
+                Debug.Log("-50 dinero");
+                fallo++;
             }
         }
-
-        if (box == 4 || box == 5 || box == 6 || box == 8 || box == 10 || box == 11 || box == 13 || box == 14 || box == 16
-            || box == 17 || box == 18 || box == 19 || box == 21 || box == 22 || box == 23 || box == 24)
+        // Jefe mal contenedor
+        if (box == 4 || box == 5 || box == 6 || box == 9 || box == 10 || box == 11 || box == 12 || box == 15 || box == 18
+            || box == 20 || box == 22 || box == 23 || box == 25 || box == 27 || box == 28)
         {
             if (button.name == "AceptarButton")
             {
-                dinero -= 75;
-                Debug.Log("-75 dinero");
+                dinero -= 50;
+                Debug.Log("-50 dinero");
+                fallo++;
             }
             if (button.name == "DenegarButton")
             {
-                dinero += 50;
-                Debug.Log("+50 dinero");
+                dinero += 25;
+                Debug.Log("+25 dinero");
             }
         }
 
         box++;
 
+        // Final dia
+
+        if (box == 6 || box == 10 || box == 14 || box == 19 || box == 24)
+        {
+            if (fallo == 0)
+            {
+                finalDiaperf.SetActive(true);
+            }
+
+            if (fallo == 1)
+            {
+                finalDia1F.SetActive(true);
+            }
+
+            if (fallo < 1)
+            {
+                finalDia2F.SetActive(true);
+            }
+
+            fallo = 0;
+        }
+
+
+        // Final vida >= 0
+        if (dinero < 0)
+        {
+            vidas--;
+            dinero = 50;
+        }
+        else             // No menrecordo de que feia F
+        {
+            dineroAmount.text = "Dinero: " + dinero.ToString();
+        }
     }
 
 

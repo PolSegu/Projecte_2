@@ -12,12 +12,16 @@ public class sonido : MonoBehaviour
     public AudioSource fuente4;
     public AudioSource fuente5;
     public AudioSource fuente6;
+    public AudioSource fuente7;
+    public AudioSource fuente8;
 
     public AudioClip clipPapel;
     public AudioClip clipCarpeta;
     public AudioClip clipLupa;
     public AudioClip clipContainerLargo;
     public AudioClip clipLapiz;
+    public AudioClip clipYes;
+    public AudioClip clipNoo;
 
     // Menu sound
 
@@ -47,6 +51,8 @@ public class sonido : MonoBehaviour
         fuente4.clip = clipContainerLargo;
         fuente5.clip = clipContainerLargo;
         fuente6.clip = clipLapiz;
+        fuente7.clip = clipYes;
+        fuente8.clip = clipNoo;
 
         //fuente11.clip = MenuSound1;
         //fuente12.clip = MenuSound2;
@@ -56,6 +62,7 @@ public class sonido : MonoBehaviour
 
         fuente20.clip = musicBackground1;
         PlayMusicaFondo();
+
     }
 
     // Update is called once per frame
@@ -87,6 +94,16 @@ public class sonido : MonoBehaviour
     public void ReproducirLapiz()
     {
         fuente6.Play();
+    }
+
+    public void ReproducirYes()
+    {
+        fuente7.Play();
+    }
+
+    public void ReproducirNoo()
+    {
+        fuente8.Play();
     }
 
     public void PlayMusicaFondo()
