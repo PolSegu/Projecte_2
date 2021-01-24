@@ -268,7 +268,7 @@ public class lvlManager : MonoBehaviour
                 sonido.instance.PlayMusicfinaldia1F();
             }
 
-            if (fallo < 1)
+            if (fallo > 1)
             {
                 finalDia2F.SetActive(true);
                 sonido.instance.PlayMusicfinaldia2F();
@@ -291,7 +291,7 @@ public class lvlManager : MonoBehaviour
 
             
         }
-        if(box == 6+1 || box == 10+1 || box == 14+1 || box == 19+1|| box == 24+1)
+        if(box == 8 || box == 10+1 || box == 14+1 || box == 19+1|| box == 24+1)
         {
             fallo = 0;
         }
@@ -325,6 +325,11 @@ public class lvlManager : MonoBehaviour
         {
             tratoMafia3 = true;
         }
+    }
+
+    public void AdministratorTool(Button button)
+    {
+        box = 27;
     }
 
 
