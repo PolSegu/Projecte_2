@@ -7,6 +7,7 @@ using TMPro;
 
 public class lvlManager : MonoBehaviour
 {
+
     private int contadorContenedorDroga = 0;
     private int contadorContenedorLegales = 0;
     private int contadorContenedorRusia = 0;
@@ -14,21 +15,28 @@ public class lvlManager : MonoBehaviour
     private int contadorContenedorAlemania = 0;
     private int contadorContenedorOtros = 0;
 
-
+    public int adminBox = 27;
     public int time;
     public int dinero;
-    public int vidas;   //se tiene que cambiar
+    public int fallo = 0;
+    public int vidas = 3;   // no se debe usar => done
     public int box;
     public TextMeshProUGUI dineroAmount;
 
-    public bool tratoRusia;
-    public bool tratoColombia;
-    public bool tratoAlemania;
-    public int trabajo;     // pasara a ser el valor correcto
+    public bool tratoMafia1 = false;
+    public bool tratoMafia2 = false;
+    public bool tratoMafia3 = false;
+    // public int trabajo;     // pasara a ser el valor correcto => done
     public int reputacionMafia1 = 50;
     public int reputacionMafia2 = 50;
     public int reputacionMafia3 = 50;
 
+    public GameObject finalDiaperf;
+    public GameObject finalDia1F;
+    public GameObject finalDia2F;
+
+    public GameObject respuestaIncorrecta;
+    public GameObject respuestaCorrecta;
 
 
     public GameObject pantallaGameOver;
@@ -39,81 +47,107 @@ public class lvlManager : MonoBehaviour
     public GameObject finalMafia2Low;
     public GameObject finalMafia3Full;
     public GameObject finalMafia3Low;
-    
-    
+
+    public GameObject presentacionMafi1;
+    public GameObject presentacionMafi2;
+    public GameObject presentacionMafi3;
+
+    private int a = 29;
+
+    public GameObject notaMafia1;
+    public GameObject notaMafia2;
+    public GameObject notaMafia3;
+
+
+
+
+
     void Start()
     {
-        if(vidas <= 0)
-        {
-            pantallaGameOver.SetActive(true);
-        }
-        else
-        {
-            pantallaGameOver.SetActive(false);
-        }
-
+       //if(vidas <= 0)
+       //{
+       //    pantallaGameOver.SetActive(true);
+       //}
+       //else
+       //{
+       //    pantallaGameOver.SetActive(false);
+       //}
 }
 
     void Update()
     {
-        // Final vida >= 0
-        if(vidas <= 0)
+        if(tratoMafia1 == true)
+        {
+            notaMafia1.SetActive(true);
+        }
+
+        if (tratoMafia2 == true)
+        {
+            notaMafia2.SetActive(true);
+        }
+
+        if (tratoMafia3 == true)
+        {
+            notaMafia3.SetActive(true);
+        }
+
+
+
+
+        // Aviso 
+        if (vidas == 2 )
+        {
+            //pantallaAviso.SetActive(true);            // De momento lo dejo fuera
+            vidas = 1;
+        }
+        // Final gameover
+        if (vidas == 0)
         {
             pantallaGameOver.SetActive(true);
             Debug.Log("gameover");
         }
-        else
-        {
-            dineroAmount.text = "Dinero: " + dinero.ToString();
-        }
-
-        // Aviso low vida
-        if (vidas == 2 && box != 6)
-        {
-            pantallaAviso.SetActive(true);
-            vidas = 1;
-        }
 
         // Finales repu FULL
-        if (reputacionMafia1 <= 100)
+        if (reputacionMafia1 >= 100)
         {
             finalMafia1Full.SetActive(true);
         }
-        if (reputacionMafia2 <= 100)
+        if (reputacionMafia2 >= 100)
         {
             finalMafia2Full.SetActive(true);
         }
-        if (reputacionMafia3 <= 100)
+        if (reputacionMafia3 >= 100)
         {
             finalMafia3Full.SetActive(true);
         }
 
         // Finales repu LOW
-        if (reputacionMafia1 >= 0)
+        if (reputacionMafia1 <= 0)
         {
             finalMafia1Low.SetActive(true);
         }
-        if (reputacionMafia2 >= 0)
+        if (reputacionMafia2 <= 0)
         {
             finalMafia2Low.SetActive(true);
         }
-        if (reputacionMafia3 >= 0)
+        if (reputacionMafia3 <= 0)
         {
             finalMafia3Low.SetActive(true);
         }
 
     }
 
-    public void Reputacion(Button button)   //reputacionRusia 1   reputacionColombia 2   reputacionAlemania 3
+    public void Trabajo(Button button)
     {
         // mafia 1
-        if (box == 6 || box == 11 || box == 16 || box == 23 )
+        if (box == 6 || box == 12 || box == 15 || box == 20 || box == 27)
         {
             if (button.name == "AceptarButton")
             {
                 reputacionMafia1 += 30;
                 reputacionMafia2 -= 10;
                 reputacionMafia3 -= 10;
+                dinero += 100;
 
                 contadorContenedorRusia++;
                 contadorContenedorDroga++;
@@ -129,13 +163,14 @@ public class lvlManager : MonoBehaviour
         }
 
         // mafia 2
-        if (box == 8 || box == 14 || box == 18 || box == 19 )
+        if (box == 10 || box == 18 || box == 22)
         {
             if (button.name == "AceptarButton")
             {
                 reputacionMafia1 -= 10;
                 reputacionMafia2 += 30;
                 reputacionMafia3 -= 10;
+                dinero += 100;
 
                 contadorContenedorColombia++;
                 contadorContenedorDroga++;
@@ -147,20 +182,22 @@ public class lvlManager : MonoBehaviour
                 reputacionMafia2 -= 10;
                 reputacionMafia3 += 5;
 
-                contadorContenedorAlemania++;
-                contadorContenedorDroga++;
                 Debug.Log("reputacionColombia+");
             }
         }
 
         // mafia 3
-        if (box == 10 || box == 13 || box == 21 || box == 24 )
+        if (box == 25 || box == 28)
         {
             if (button.name == "AceptarButton")
             {
                 reputacionMafia1 -= 10;
                 reputacionMafia2 -= 10;
                 reputacionMafia3 += 30;
+                dinero += 100;
+
+                contadorContenedorAlemania++;
+                contadorContenedorDroga++;
                 Debug.Log("reputacionAlemania-");
             }
             if (button.name == "DenegarButton")
@@ -172,45 +209,128 @@ public class lvlManager : MonoBehaviour
             }
         }
 
-    }
-
-    public void Trabajo(Button button)
-    {
-        if(box == 1 || box == 2 || box == 3 || box == 7 || box == 9 || box == 12 || box == 15 || box == 20 || box == 25)
+        // Jefe buen contenedor
+        if (box == 1 || box == 2 || box == 3 || box == 7 || box == 8 || box == 13 || box == 14 || box == 16 || box == 17 || box == 19 || box == 21 || box == 24 || box == 26 || box == 29)
         {
             if(button.name == "AceptarButton")
             {
-                dinero += 50;
-                Debug.Log("+50 dinero");
+                dinero += 25;
+                Debug.Log("+25 dinero");
+                respuestaCorrecta.SetActive(true);
+                sonido.instance.ReproducirYes();      // Sonido
             }
             if (button.name == "DenegarButton")
             {
-                dinero -= 75;
-                Debug.Log("-75 dinero");
+                dinero -= 50;
+                Debug.Log("-50 dinero");
+                fallo++;
+                respuestaIncorrecta.SetActive(true);
+                sonido.instance.ReproducirNoo();
             }
         }
-
-        if (box == 4 || box == 5 || box == 6 || box == 8 || box == 10 || box == 11 || box == 13 || box == 14 || box == 16
-            || box == 17 || box == 18 || box == 19 || box == 21 || box == 22 || box == 23 || box == 24)
+        // Jefe mal contenedor
+        if (box == 4 || box == 5 || box == 6 || box == 9 || box == 10 || box == 11 || box == 12 || box == 15 || box == 18
+            || box == 20 || box == 22 || box == 23 || box == 25 || box == 27 || box == 28)
         {
             if (button.name == "AceptarButton")
             {
-                dinero -= 75;
-                Debug.Log("-75 dinero");
+                dinero -= 50;
+                Debug.Log("-50 dinero");
+                fallo++;
+                respuestaIncorrecta.SetActive(true);
+                sonido.instance.ReproducirNoo();
             }
             if (button.name == "DenegarButton")
             {
-                dinero += 50;
-                Debug.Log("+50 dinero");
+                dinero += 25;
+                Debug.Log("+25 dinero");
+                respuestaCorrecta.SetActive(true);
+                sonido.instance.ReproducirYes();
             }
         }
 
         box++;
 
+        // Final dia
+
+        if (box == 6 || box == 10 || box == 14 || box == 19 || box == 24)
+        {
+            if (fallo == 0)
+            {
+                finalDiaperf.SetActive(true);
+                sonido.instance.PlayMusicfinaldiaperf();
+
+            }
+
+            if (fallo == 1)
+            {
+                finalDia1F.SetActive(true);
+                sonido.instance.PlayMusicfinaldia1F();
+            }
+
+            if (fallo > 1)
+            {
+                finalDia2F.SetActive(true);
+                sonido.instance.PlayMusicfinaldia2F();
+            }
+
+            if(box == 6)
+            {
+                presentacionMafi1.SetActive(true);
+            }
+
+            if (box == 10)
+            {
+                presentacionMafi2.SetActive(true);
+            }
+
+            if (box == 19)
+            {
+                presentacionMafi3.SetActive(true);
+            }
+
+            
+        }
+        if(box == 8 || box == 10+1 || box == 14+1 || box == 19+1|| box == 24+1)
+        {
+            fallo = 0;
+        }
+
+
+        // Final vida >= 0
+        if (dinero < 0)
+        {
+            vidas--;
+            dinero = 50;
+        }
+        else             // No menrecordo de que feia F
+        {
+            dineroAmount.text = "Dinero: " + dinero.ToString();
+        }
     }
 
+    public void selectMafia(Button button)
+    {
+        if (button.name == "AceptarMafiaButton" && box == 6)
+        {
+            tratoMafia1 = true;
+        }
 
+        if (button.name == "AceptarMafiaButton" && box == 10)
+        {
+            tratoMafia2 = true;
+        }
 
-    
+        if (button.name == "AceptarMafiaButton" && box == 19)
+        {
+            tratoMafia3 = true;
+        }
+    }
+
+    public void AdministratorTool(Button button)
+    {
+        box = adminBox;
+    }
+
 
 }
