@@ -1,0 +1,204 @@
+fileFormatVersion: 2
+guid: 54555933f29e9a140ad5ff48120917aa
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2548330221797592492
+    second: fondoAiguaPort_0
+  - first:
+      213: 1723634840742035761
+    second: fondoAiguaPort_1
+  - first:
+      213: 3421825315182749923
+    second: fondoAiguaPort_2
+  - first:
+      213: -1287942010275886370
+    second: fondoAiguaPort_3
+  - first:
+      213: -3963185053909021181
+    second: fondoAiguaPort_4
+  - first:
+      213: 249273028275072034
+    second: fondoAiguaPort_5
+  - first:
+      213: -4295784929494188203
+    second: fondoAiguaPort_6
+  - first:
+      213: -7569570163102716369
+    second: fondoAiguaPort_7
+  - first:
+      213: -9167904914505678843
+    second: fondoAiguaPort_8
+  - first:
+      213: -7405798953811394548
+    second: fondoAiguaPort_9
+  - first:
+      213: -5231648411328344893
+    second: fondoAiguaPort_10
+  - first:
+      213: -4906652917399176892
+    second: fondoAiguaPort_11
+  - first:
+      213: -9100285710659606009
+    second: fondoAiguaPort_12
+  - first:
+      213: 1575286695868705438
+    second: fondoAiguaPort_13
+  - first:
+      213: 1786550859479615830
+    second: fondoAiguaPort_14
+  - first:
+      213: -8940466517605462317
+    second: fondoAiguaPort_15
+  - first:
+      213: -3884967972849154212
+    second: fondoAiguaPort_16
+  - first:
+      213: -1710438566138048286
+    second: fondoAiguaPort_17
+  - first:
+      213: -4360959949396169888
+    second: fondoAiguaPort_18
+  - first:
+      213: -1274257094620043485
+    second: fondoAiguaPort_19
+  - first:
+      213: -6788815467845726174
+    second: fondoAiguaPort_20
+  - first:
+      213: 3915716179770946165
+    second: fondoAiguaPort_21
+  - first:
+      213: -5533305108251163502
+    second: fondoAiguaPort_22
+  - first:
+      213: 8836083215990181921
+    second: fondoAiguaPort_23
+  - first:
+      213: 7107456430323939519
+    second: fondoAiguaPort_24
+  - first:
+      213: -8666839656429391189
+    second: fondoAiguaPort_25
+  - first:
+      213: 5700538031317753589
+    second: fondoAiguaPort_26
+  - first:
+      213: -4282024334955216322
+    second: fondoAiguaPort_27
+  - first:
+      213: 3993552127826435570
+    second: fondoAiguaPort_28
+  - first:
+      213: -6910998568760786686
+    second: fondoAiguaPort_29
+  - first:
+      213: -1976246842999125972
+    second: fondoAiguaPort_30
+  - first:
+      213: 4274436137267346210
+    second: fondoAiguaPort_31
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 188, y: 500, z: 188, w: 360}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: 0
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites: []
+    outline:
+    - - {x: -795, y: -66}
+      - {x: -795, y: 228}
+      - {x: 791, y: 228}
+      - {x: 791, y: -66}
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
